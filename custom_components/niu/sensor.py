@@ -13,9 +13,9 @@ import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
 
-ACCOUNT_BASE_URL = "https://account-fk.niu.com"
+ACCOUNT_BASE_URL = "https://account.niu.com"
 LOGIN_URI = "/appv2/login"
-API_BASE_URL = "https://app-api-fk.niu.com"
+API_BASE_URL = "https://app-api.niu.com"
 MOTOR_BATTERY_API_URI = "/v3/motor_data/battery_info"
 MOTOR_INDEX_API_URI = "/v3/motor_data/index_info"
 MOTOINFO_LIST_API_URI = "/motoinfo/list"
@@ -441,9 +441,9 @@ class NiuDataBridge(object):
             )
         if id_field == "track_thumb":
             thumburl = self._dataTrackInfo["data"][0][id_field].replace(
-                "app-api.niucache.com", "app-api-fk.niu.com"
+                "app-api.niucache.com", "app-api.niu.com"
             )
-            return thumburl.replace("/track/thumb/", "/track/overseas/thumb/")
+            return thumburl.replace("/track/thumb/", "/track/thumb/")
         return self._dataTrackInfo["data"][0][id_field]
 
     @Throttle(timedelta(seconds=1))
