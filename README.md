@@ -1,6 +1,7 @@
 # niu
 
 This is a custom component for Home Assistant to integrate your Niu Scooter.
+Suitable for users in mainland China.
 
 ## Install
 
