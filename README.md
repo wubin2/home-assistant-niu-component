@@ -15,7 +15,7 @@ sensor:
   - platform: niu
     username: user@example.com
     password: mysecretpassword
-    country: 49
+    country: 86
     scooter_id: 0
     monitored_variables:
       - BatteryCharge          # Battery
